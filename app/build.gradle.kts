@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.wazwazz.muslimmedia"
         minSdk = 24
-        targetSdkPreview = "UpsideDownCake"
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 

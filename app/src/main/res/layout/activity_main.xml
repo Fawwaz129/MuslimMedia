@@ -15,11 +15,14 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
+            app:logo="@mipmap/ic_launcher"
             android:layout_height="?attr/actionBarSize" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
+            app:tabIndicatorColor="@color/DarkGreen"
+            app:tabSelectedTextAppearance="@style/TextStyleBold"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.appbar.AppBarLayout>
