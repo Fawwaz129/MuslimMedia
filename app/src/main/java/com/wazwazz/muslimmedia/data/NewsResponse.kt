@@ -1,7 +1,9 @@
 package com.wazwazz.muslimmedia.data
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class NewsResponse(
 
 	@Json(name="totalResults")
@@ -13,7 +15,7 @@ data class NewsResponse(
 	@Json(name="status")
 	val status: String? = null
 )
-
+@JsonClass(generateAdapter = true)
 data class ArticlesItem(
 
 	@Json(name="publishedAt")
@@ -40,7 +42,7 @@ data class ArticlesItem(
 	@Json(name="content")
 	val content: String? = null
 )
-
+@JsonClass(generateAdapter = true)
 data class Source(
 
 	@Json(name="name")
