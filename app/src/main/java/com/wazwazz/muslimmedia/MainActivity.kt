@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             tab.text = listFragment[position]
         }.attach()
 
-        ApiClient.retrofit.getCommonMuslimNews().enqueue(object : Callback<NewsResponse>{
+        ApiClient.getApiService().getCommonMuslimNews().enqueue(object : Callback<NewsResponse>{
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
                 Toast.makeText(this@MainActivity, "OK", Toast.LENGTH_SHORT).show()
                 Log.i("MainActivity", "onResponse : ${response.body()}")
