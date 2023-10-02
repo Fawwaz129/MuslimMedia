@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    name=(Type your style name) parent=Theme.SplashScreen is from API 12  -->
+    <style name="Theme.App.SplashScreenBase" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <!--Use windowSplashScreenBackground to change color screen background-->
+        <item name="windowSplashScreenBackground">@color/WhiteSmoke</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.MuslimMedia</item>
+    </style>
+
+    <style name="Theme.App.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.App.NoActionBar." parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/WhiteSmoke</item>
+    </style>
+</resources>

@@ -1,15 +1,18 @@
 package com.wazwazz.muslimmedia.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.squareup.picasso.Picasso
+import com.wazwazz.muslimmedia.DetailActivity
 import com.wazwazz.muslimmedia.data.ArticlesItem
 import com.wazwazz.muslimmedia.databinding.ItemNewsBinding
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
     private var listNews = ArrayList<ArticlesItem>()
+
 
     fun setData(list: List<ArticlesItem>?) {
         if (list == null) return
@@ -29,8 +32,13 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
         val data = listNews[position]
         holder.binding.apply {
             itemTitle.text = data.title
-            itemDate.text = data.publishedAt
+            itemDescription.text = data.description
             Picasso.get().load(data.urlToImage).into(itemImage)
+        }
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_DATA, data)
+            it.context.startActivity(intent)
         }
     }
 }

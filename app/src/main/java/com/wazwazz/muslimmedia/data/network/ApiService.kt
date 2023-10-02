@@ -14,6 +14,35 @@ interface ApiService {
         @Query("language") language: String = "en",
         @Query("sortBy") sortBy: String = "popularity",
         @Query("pageSize") pageSize: Int = 30,
-        @Query("apiKey") apiKey: String = "6849a53e1195491495b2b0a17209a630"
-    ) : Call<NewsResponse>
+        @Query("apiKey") apiKey: String = "65c5f26a2d5546838231f6986b1e8b5e"
+    ): Call<NewsResponse>
+
+    @GET("everything")
+    fun getAboutAlquranNews(
+        @Query("q") keyword: String = "al quran",
+        @Query("language") language: String = "en",
+        @Query("sortBy") sortBy: String = "popularity",
+        @Query("pageSize") pageSize: Int = 30,
+        @Query("apiKey") apiKey: String = "65c5f26a2d5546838231f6986b1e8b5e"
+    ): Call<NewsResponse>
+
+    @GET("everything")
+    fun getAlJazeeraNews(
+        @Query("q") keyword: String = "al jazeera",
+        @Query("language") language: String = "en",
+        @Query("pageSize") pageSize: Int = 30,
+        @Query("apiKey") apiKey: String = "65c5f26a2d5546838231f6986b1e8b5e"
+    ): Call<NewsResponse>
+
+    @GET("everything")
+    fun getWarmingForIslam(
+        @Query("q") keyword: String = "anti islam",
+        @Query("apiKey") apiKey: String = "65c5f26a2d5546838231f6986b1e8b5e"
+    ): Call<NewsResponse>
+
+    @GET("everything")
+    fun searchNews(
+        @Query("q") query: String,
+        @Query("pageSize") pageSize: Int = 50,
+    ): Call<NewsResponse>
 }

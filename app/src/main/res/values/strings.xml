@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="getting_news">Getting news</string>
     <string name="content_desc_image">content_desc_image</string>
+    <string name="detail_image_news">detail_image_news</string>
+    <string name="search">search</string>
+    <string name="search_your_news">search_your_news</string>
 </resources>
